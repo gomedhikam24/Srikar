@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Srikar Gomedhikam | SAP SD Consultant</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.16/400.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.16/500.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.16/700.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.0.15/index.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sap-blue:#003366;--sap-mid:#0070D2;--sap-light:#EBF5FF;
+  --sap-green:#107E3E;--sap-green-lt:#F1FAF5;
+  --sap-amber:#E9730C;--sap-amber-lt:#FEF3E6;
+  --sap-gray:#F5F6F7;--sap-border:#D9DBDD;
+  --text:#1C2B36;--muted:#556B7D;--white:#ffffff;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);line-height:1.6;font-size:15px}
+
+nav{background:var(--sap-blue);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:56px;border-bottom:3px solid var(--sap-mid)}
+.nav-brand{display:flex;align-items:center;gap:10px}
+.nav-badge{background:var(--sap-mid);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:0.05em}
+.nav-name{color:#fff;font-weight:600;font-size:14px;letter-spacing:0.03em}
+.nav-links{display:flex;gap:0;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:12px;padding:0 1rem;height:56px;display:flex;align-items:center;border-bottom:3px solid transparent;margin-bottom:-3px;transition:all 0.15s;letter-spacing:0.04em;text-transform:uppercase;font-weight:500}
+.nav-links a:hover{color:#fff;border-bottom-color:var(--sap-mid)}
+
+.hero{background:var(--sap-blue);padding:5rem 2.5rem 4rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.hero-role{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--sap-mid);margin-bottom:0.75rem;font-weight:600}
+.hero-name{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.2rem,4vw,3.5rem);color:#fff;font-weight:700;line-height:1.1;margin-bottom:1rem}
+.hero-name em{color:var(--sap-mid);font-style:normal}
+.hero-summary{color:rgba(255,255,255,0.65);font-size:0.95rem;max-width:520px;margin-bottom:2rem;line-height:1.8}
+.hero-chips{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem}
+.chip{background:rgba(0,112,210,0.2);color:#7EC8FF;border:1px solid rgba(0,112,210,0.4);padding:0.3rem 0.85rem;border-radius:3px;font-size:0.75rem;font-weight:600;letter-spacing:0.05em}
+.hero-btns{display:flex;gap:0.75rem;flex-wrap:wrap}
+.btn-blue{background:var(--sap-mid);color:#fff;padding:0.6rem 1.5rem;border-radius:4px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:background 0.15s;display:inline-block}
+.btn-blue:hover{background:#005CB3}
+.btn-ghost{border:1px solid rgba(255,255,255,0.35);color:rgba(255,255,255,0.85);padding:0.6rem 1.5rem;border-radius:4px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:background 0.15s;display:inline-block}
+.btn-ghost:hover{background:rgba(255,255,255,0.08)}
+.hero-right{display:flex;flex-direction:column;gap:0.75rem}
+.kpi-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:1rem 1.25rem;min-width:160px;text-align:center}
+.kpi-num{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:700;color:#fff;display:block}
+.kpi-label{font-size:0.7rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.1em;margin-top:2px}
+
+.otc-section{background:var(--sap-light);padding:3rem 2.5rem;border-bottom:1px solid var(--sap-border)}
+.otc-title{font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--sap-mid);font-weight:700;margin-bottom:0.5rem}
+.otc-heading{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;color:var(--sap-blue);margin-bottom:1.5rem}
+.otc-flow{display:flex;align-items:center;gap:0;flex-wrap:wrap}
+.otc-step{background:#fff;border:2px solid var(--sap-mid);border-radius:4px;padding:0.75rem 1rem;min-width:110px;text-align:center;flex:1}
+.otc-step-icon{font-size:18px;margin-bottom:4px}
+.otc-step-name{font-size:0.72rem;font-weight:700;color:var(--sap-blue);text-transform:uppercase;letter-spacing:0.04em}
+.otc-arrow{color:var(--sap-mid);font-size:1.2rem;padding:0 0.4rem;flex-shrink:0}
+
+.section{padding:3.5rem 2.5rem}
+.section-label{font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--sap-mid);font-weight:700;margin-bottom:0.4rem}
+.section-heading{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--sap-blue);margin-bottom:2rem}
+
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.comp-card{border:1px solid var(--sap-border);border-radius:6px;padding:1.25rem;background:#fff;border-top:3px solid var(--sap-mid)}
+.comp-area{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--sap-mid);font-weight:700;margin-bottom:0.5rem}
+.comp-title{font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:0.5rem}
+.comp-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:0.6rem}
+.comp-tag{background:var(--sap-gray);color:var(--muted);font-size:0.68rem;padding:2px 7px;border-radius:3px;font-weight:600}
+
+.exp-section{background:var(--sap-gray)}
+.exp-grid{display:flex;flex-direction:column;gap:1.25rem}
+.exp-card{background:#fff;border:1px solid var(--sap-border);border-radius:6px;overflow:hidden}
+.exp-header{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid var(--sap-border)}
+.exp-logo{width:42px;height:42px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0}
+.exp-client{font-weight:700;font-size:1rem;color:var(--text)}
+.exp-role{font-size:0.8rem;color:var(--sap-mid);font-weight:600;margin-top:1px}
+.exp-company{font-size:0.75rem;color:var(--muted);margin-top:1px}
+.exp-right{text-align:right;flex-shrink:0}
+.exp-date{font-size:0.75rem;font-weight:700;color:var(--sap-blue);white-space:nowrap}
+.exp-badge{display:inline-block;margin-top:4px;font-size:0.65rem;padding:2px 8px;border-radius:3px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em}
+.badge-impl{background:var(--sap-green-lt);color:var(--sap-green)}
+.badge-supp{background:var(--sap-amber-lt);color:var(--sap-amber)}
+.badge-both{background:var(--sap-light);color:var(--sap-mid)}
+.exp-body{padding:1rem 1.25rem}
+.exp-list{list-style:none;display:flex;flex-direction:column;gap:0.4rem}
+.exp-list li{font-size:0.83rem;color:var(--muted);padding-left:1.1rem;position:relative}
+.exp-list li::before{content:'▸';position:absolute;left:0;color:var(--sap-mid);font-size:0.7rem;top:2px}
+.exp-modules{display:flex;flex-wrap:wrap;gap:4px;margin-top:0.75rem}
+.mod-tag{background:var(--sap-blue);color:#fff;font-size:0.65rem;padding:2px 8px;border-radius:3px;font-weight:700;letter-spacing:0.04em}
+
+.skills-section{padding:3.5rem 2.5rem;background:#fff}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.skill-group-title{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--sap-mid);font-weight:700;margin-bottom:1rem;border-bottom:1px solid var(--sap-border);padding-bottom:0.5rem}
+.skill-row{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem}
+.skill-name{font-size:0.8rem;font-weight:600;color:var(--text);width:170px;flex-shrink:0}
+.skill-bar-bg{flex:1;height:6px;background:var(--sap-gray);border-radius:3px;overflow:hidden}
+.skill-bar{height:100%;border-radius:3px;background:var(--sap-mid)}
+.skill-pct{font-size:0.72rem;color:var(--muted);width:40px;text-align:right;flex-shrink:0}
+
+.tools-section{background:var(--sap-blue);padding:3rem 2.5rem}
+.tools-section .section-heading{color:#fff}
+.tools-section .section-label{color:rgba(255,255,255,0.45)}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem}
+.tool-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:1rem;text-align:center}
+.tool-name{font-size:0.82rem;font-weight:700;color:#fff;margin-bottom:2px}
+.tool-type{font-size:0.65rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.06em}
+
+.contact-section{padding:3.5rem 2.5rem;background:#fff;text-align:center}
+.contact-row{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:1.5rem}
+.contact-pill{display:flex;align-items:center;gap:0.6rem;background:var(--sap-light);border:1px solid rgba(0,112,210,0.2);border-radius:30px;padding:0.6rem 1.25rem}
+.contact-pill-icon{width:28px;height:28px;background:var(--sap-mid);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.contact-pill-icon svg{width:14px;height:14px;fill:#fff}
+.contact-pill-label{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);font-weight:700;display:block}
+.contact-pill-val{font-size:0.82rem;font-weight:600;color:var(--sap-blue)}
+
+footer{background:var(--sap-blue);text-align:center;padding:1.5rem;border-top:3px solid var(--sap-mid)}
+footer p{font-size:0.75rem;color:rgba(255,255,255,0.3)}
+
+@media(max-width:700px){
+  .hero{grid-template-columns:1fr}.hero-right{flex-direction:row;flex-wrap:wrap}.kpi-card{min-width:120px;flex:1}
+  .skills-grid{grid-template-columns:1fr}
+  nav{padding:0 1rem}.nav-links{display:none}
+  .section,.skills-section,.tools-section,.contact-section,.otc-section{padding:2.5rem 1.25rem}
+  .hero{padding:4rem 1.25rem 2.5rem}
+  .exp-header{grid-template-columns:auto 1fr}.exp-right{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <div class="nav-badge">SAP SD</div>
+    <span class="nav-name">Srikar Gomedhikam</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#competencies">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-role">SAP S/4HANA · Sales &amp; Distribution</div>
+    <h1 class="hero-name">Srikar<br><em>Gomedhikam</em></h1>
+    <p class="hero-summary">SAP SD Consultant specializing in SAP S/4HANA implementations, sales process optimization, customer master configuration, pricing procedures, delivery management, billing, and end-to-end Order-to-Cash transformation.</p>
+    <div class="hero-chips">
+      <span class="chip">S/4HANA OTC</span>
+      <span class="chip">Business Partner</span>
+      <span class="chip">BRF+</span>
+      <span class="chip">CVI</span>
+      <span class="chip">RICEFW</span>
+      <span class="chip">Pricing Procedure</span>
+      <span class="chip">Partner Determination</span>
+      <span class="chip">Output Determination</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#experience" class="btn-blue">View Experience</a>
+      <a href="#contact" class="btn-ghost">Contact Me</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="kpi-card"><span class="kpi-num">5+</span><span class="kpi-label">Years in SAP SD</span></div>
+    <div class="kpi-card"><span class="kpi-num">4</span><span class="kpi-label">Enterprise Clients</span></div>
+    <div class="kpi-card"><span class="kpi-num">2</span><span class="kpi-label">Full Implementations</span></div>
+  </div>
+</div>
+
+<div class="otc-section">
+  <div class="otc-title">Core Expertise</div>
+  <div class="otc-heading">Order-to-Cash (OTC) Cycle — S/4HANA</div>
+  <div class="otc-flow">
+    <div class="otc-step"><div class="otc-step-icon">📋</div><div class="otc-step-name">Inquiry</div></div>
+    <div class="otc-arrow">›</div>
+    <div class="otc-step"><div class="otc-step-icon">📄</div><div class="otc-step-name">Quotation</div></div>
+    <div class="otc-arrow">›</div>
+    <div class="otc-step"><div class="otc-step-icon">🛒</div><div class="otc-step-name">Sales Order</div></div>
+    <div class="otc-arrow">›</div>
+    <div class="otc-step"><div class="otc-step-icon">🚚</div><div class="otc-step-name">Delivery</div></div>
+    <div class="otc-arrow">›</div>
+    <div class="otc-step"><div class="otc-step-icon">📦</div><div class="otc-step-name">Goods Issue</div></div>
+    <div class="otc-arrow">›</div>
+    <div class="otc-step"><div class="otc-step-icon">🧾</div><div class="otc-step-name">Billing</div></div>
+    <div class="otc-arrow">›</div>
+    <div class="otc-step"><div class="otc-step-icon">💰</div><div class="otc-step-name">Payment</div></div>
+  </div>
+</div>
+
+<div class="section" id="competencies">
+  <div class="section-label">Technical Competencies</div>
+  <div class="section-heading">SAP SD Expertise Areas</div>
+  <div class="comp-grid">
+    <div class="comp-card">
+      <div class="comp-area">Configuration</div>
+      <div class="comp-title">Enterprise Structure &amp; OTC</div>
+      <p style="font-size:0.8rem;color:var(--muted)">Sales Org, Distribution Channel, Division, Plant assignments, and full OTC cycle configuration in S/4HANA simplified landscape.</p>
+      <div class="comp-tags"><span class="comp-tag">Sales Org</span><span class="comp-tag">OTC Cycle</span><span class="comp-tag">S/4HANA</span></div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-area">Master Data</div>
+      <div class="comp-title">Business Partner &amp; CVI</div>
+      <p style="font-size:0.8rem;color:var(--muted)">Mandatory BP configuration, groupings, roles, and Customer-Vendor Integration in the simplified S/4HANA data model.</p>
+      <div class="comp-tags"><span class="comp-tag">BP Config</span><span class="comp-tag">CVI</span><span class="comp-tag">Master Data</span></div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-area">Output Management</div>
+      <div class="comp-title">BRF+ &amp; Document Determination</div>
+      <p style="font-size:0.8rem;color:var(--muted)">Modern output management via BRF+ for order confirmations, delivery notes, and invoices — replacing legacy NACE.</p>
+      <div class="comp-tags"><span class="comp-tag">BRF+</span><span class="comp-tag">NACE</span><span class="comp-tag">Output Det.</span></div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-area">Pricing</div>
+      <div class="comp-title">Pricing Procedure &amp; Conditions</div>
+      <p style="font-size:0.8rem;color:var(--muted)">Condition technique, pricing procedures, condition types, access sequences, and condition records for complex pricing scenarios.</p>
+      <div class="comp-tags"><span class="comp-tag">Condition Types</span><span class="comp-tag">Access Sequence</span><span class="comp-tag">Surcharge/Discount</span></div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-area">Document Flow</div>
+      <div class="comp-title">Partner Determination</div>
+      <p style="font-size:0.8rem;color:var(--muted)">Partner determination configuration for sold-to, ship-to, bill-to, and payer roles ensuring accurate document routing and business process flow.</p>
+      <div class="comp-tags"><span class="comp-tag">Sold-to</span><span class="comp-tag">Ship-to</span><span class="comp-tag">Bill-to / Payer</span></div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-area">Integration</div>
+      <div class="comp-title">SD–MM–FI Cross-Module</div>
+      <p style="font-size:0.8rem;color:var(--muted)">Seamless integration between Sales, Materials Management, and Finance — including account determination and revenue posting in S/4HANA.</p>
+      <div class="comp-tags"><span class="comp-tag">SD–MM</span><span class="comp-tag">SD–FI</span><span class="comp-tag">Account Det.</span></div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-area">Development Support</div>
+      <div class="comp-title">Functional Specs &amp; RICEFW</div>
+      <p style="font-size:0.8rem;color:var(--muted)">Authoring functional specifications for Reports, Interfaces, Conversions, Enhancements, Forms, and Workflows in S/4HANA landscape.</p>
+      <div class="comp-tags"><span class="comp-tag">FS Docs</span><span class="comp-tag">RICEFW</span><span class="comp-tag">UAT</span></div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-area">Project Delivery</div>
+      <div class="comp-title">Requirements &amp; Training</div>
+      <p style="font-size:0.8rem;color:var(--muted)">End-to-end requirements gathering, gap analysis, solution design, and end-user training on S/4HANA Sales functionalities.</p>
+      <div class="comp-tags"><span class="comp-tag">Gap Analysis</span><span class="comp-tag">Workshops</span><span class="comp-tag">End-User Training</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="exp-section section" id="experience">
+  <div class="section-label">Career Timeline</div>
+  <div class="section-heading">Project Experience</div>
+  <div class="exp-grid">
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-logo" style="background:#EBF5FF;color:#003366">J&amp;J</div>
+        <div class="exp-meta">
+          <div class="exp-client">Johnson &amp; Johnson</div>
+          <div class="exp-role">SAP SD Consultant</div>
+          <div class="exp-company">Orcapod Consultancy · Hyderabad</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-date">Nov 2025 – Mar 2026</div>
+          <span class="exp-badge badge-impl">Implementation</span>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-list">
+          <li>Configured SAP S/4HANA Sales enterprise structures and full Order-to-Cash cycle aligned to simplified best practices</li>
+          <li>Managed mandatory Business Partner (BP) configuration, groupings, and CVI role assignments</li>
+          <li>Implemented modern output management via BRF+ for document determination and transmission</li>
+          <li>Ensured seamless SD–MM–FI integration within the unified S/4HANA data model</li>
+          <li>Authored functional specifications for RICEFW objects with real-time Finance integration</li>
+        </ul>
+        <div class="exp-modules">
+          <span class="mod-tag">SD</span><span class="mod-tag">S/4HANA</span><span class="mod-tag">BRF+</span><span class="mod-tag">CVI</span><span class="mod-tag">FI Integration</span><span class="mod-tag">MM Integration</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-logo" style="background:#FEF3E6;color:#7A3B00">RG</div>
+        <div class="exp-meta">
+          <div class="exp-client">Rezayat Group</div>
+          <div class="exp-role">SAP SD Associate Consultant</div>
+          <div class="exp-company">Techsource Emerging INFO Technologies</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-date">Dec 2023 – Aug 2025</div>
+          <span class="exp-badge badge-supp">Support</span>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-list">
+          <li>Resolved high-priority incidents in S/4HANA Sales ensuring minimal Order-to-Cash disruption</li>
+          <li>Maintained Business Partner master data and resolved CVI integration issues</li>
+          <li>Troubleshot BRF+ document determination failures ensuring correct output generation</li>
+          <li>Corrected data inconsistencies within the simplified S/4HANA data model for accurate reporting</li>
+          <li>Provided functional support for enhancements adapting sales logic to S/4HANA best practices</li>
+        </ul>
+        <div class="exp-modules">
+          <span class="mod-tag">SD</span><span class="mod-tag">S/4HANA</span><span class="mod-tag">BRF+</span><span class="mod-tag">BP Master Data</span><span class="mod-tag">Incident Mgmt</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-logo" style="background:#F1FAF5;color:#0A5C2E">BMW</div>
+        <div class="exp-meta">
+          <div class="exp-client">BMW</div>
+          <div class="exp-role">SAP Associate Consultant</div>
+          <div class="exp-company">HCL Technologies · Bangalore</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-date">May 2022 – Nov 2023</div>
+          <span class="exp-badge badge-both">Impl. &amp; Support</span>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-list">
+          <li>Gathered client requirements for S/4HANA Sales implementations aligned to best practices</li>
+          <li>Configured S/4HANA modules and Business Partner settings in the simplified data environment</li>
+          <li>Delivered end-user training on S/4HANA Sales functionalities and modern OTC workflows</li>
+          <li>Analysed and resolved OTC cycle incidents maintaining data integrity across the S/4HANA landscape</li>
+          <li>Coordinated with technical teams on RICEFW optimisations and configuration updates</li>
+        </ul>
+        <div class="exp-modules">
+          <span class="mod-tag">SD</span><span class="mod-tag">S/4HANA</span><span class="mod-tag">RICEFW</span><span class="mod-tag">End-User Training</span><span class="mod-tag">OTC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-logo" style="background:#EEEDFE;color:#3C3489">SH</div>
+        <div class="exp-meta">
+          <div class="exp-client">Shelby</div>
+          <div class="exp-role">SAP Consultant</div>
+          <div class="exp-company">Universal Softech Hub · Bangalore</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-date">Sep 2020 – Apr 2022</div>
+          <span class="exp-badge badge-both">Support &amp; Impl.</span>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-list">
+          <li>Led client consultations to identify business requirements and recommend S/4HANA Sales solutions</li>
+          <li>Developed operational efficiency strategies leveraging the S/4HANA simplified data model and OTC workflows</li>
+          <li>Collaborated with technical teams on BP roles, Pricing, and BRF+ output management configuration</li>
+          <li>Handled incidents and service requests from end users delivering timely and accurate solutions</li>
+        </ul>
+        <div class="exp-modules">
+          <span class="mod-tag">SD</span><span class="mod-tag">S/4HANA</span><span class="mod-tag">Pricing</span><span class="mod-tag">BRF+</span><span class="mod-tag">Incident Mgmt</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="skills-section" id="skills">
+  <div class="section-label">Proficiency Levels</div>
+  <div class="section-heading">Technical Skill Depth</div>
+  <div class="skills-grid">
+    <div>
+      <div class="skill-group-title">SAP SD Core</div>
+      <div class="skill-row"><span class="skill-name">OTC Configuration</span><div class="skill-bar-bg"><div class="skill-bar" style="width:95%"></div></div><span class="skill-pct">Expert</span></div>
+      <div class="skill-row"><span class="skill-name">Business Partner / CVI</span><div class="skill-bar-bg"><div class="skill-bar" style="width:92%"></div></div><span class="skill-pct">Expert</span></div>
+      <div class="skill-row"><span class="skill-name">Pricing Procedure</span><div class="skill-bar-bg"><div class="skill-bar" style="width:88%"></div></div><span class="skill-pct">Advanced</span></div>
+      <div class="skill-row"><span class="skill-name">Output Det. / BRF+</span><div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div><span class="skill-pct">Expert</span></div>
+      <div class="skill-row"><span class="skill-name">Partner Determination</span><div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div><span class="skill-pct">Advanced</span></div>
+    </div>
+    <div>
+      <div class="skill-group-title">Integration &amp; Delivery</div>
+      <div class="skill-row"><span class="skill-name">SD–MM–FI Integration</span><div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div><span class="skill-pct">Advanced</span></div>
+      <div class="skill-row"><span class="skill-name">RICEFW Spec Writing</span><div class="skill-bar-bg"><div class="skill-bar" style="width:88%"></div></div><span class="skill-pct">Advanced</span></div>
+      <div class="skill-row"><span class="skill-name">Requirements Gathering</span><div class="skill-bar-bg"><div class="skill-bar" style="width:92%"></div></div><span class="skill-pct">Expert</span></div>
+      <div class="skill-row"><span class="skill-name">End-User Training</span><div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div><span class="skill-pct">Advanced</span></div>
+      <div class="skill-row"><span class="skill-name">Master Data Management</span><div class="skill-bar-bg"><div class="skill-bar" style="width:82%"></div></div><span class="skill-pct">Advanced</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tools-section section" id="tools">
+  <div class="section-label" style="color:rgba(255,255,255,0.45)">SAP Ecosystem</div>
+  <div class="section-heading">Tools &amp; Technologies</div>
+  <div class="tools-grid">
+    <div class="tool-card"><div class="tool-name">SAP S/4HANA</div><div class="tool-type">Core Platform</div></div>
+    <div class="tool-card"><div class="tool-name">SAP ECC</div><div class="tool-type">Legacy ERP</div></div>
+    <div class="tool-card"><div class="tool-name">BRF+</div><div class="tool-type">Output Management</div></div>
+    <div class="tool-card"><div class="tool-name">SAP Fiori</div><div class="tool-type">User Interface</div></div>
+    <div class="tool-card"><div class="tool-name">SAP Solution Manager</div><div class="tool-type">Project Delivery</div></div>
+    <div class="tool-card"><div class="tool-name">SAP Best Practices</div><div class="tool-type">Implementation</div></div>
+    <div class="tool-card"><div class="tool-name">SAP Activate</div><div class="tool-type">Methodology</div></div>
+    <div class="tool-card"><div class="tool-name">MS Excel / Word</div><div class="tool-type">Documentation</div></div>
+  </div>
+</div>
+
+<div class="contact-section" id="contact">
+  <div class="section-label">Get In Touch</div>
+  <div class="section-heading" style="margin-bottom:0.5rem">Available for SAP SD Opportunities</div>
+  <p style="color:var(--muted);font-size:0.9rem;max-width:440px;margin:0 auto">Open to implementation projects, support roles, and S/4HANA migration engagements globally.</p>
+  <div class="contact-row">
+    <div class="contact-pill">
+      <div class="contact-pill-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </div>
+      <div>
+        <span class="contact-pill-label">Email</span>
+        <span class="contact-pill-val">sgomedh@gmail.com</span>
+      </div>
+    </div>
+    <div class="contact-pill">
+      <div class="contact-pill-icon">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+      </div>
+      <div>
+        <span class="contact-pill-label">Phone</span>
+        <span class="contact-pill-val">+91 7207376138</span>
+      </div>
+    </div>
+    <div class="contact-pill">
+      <div class="contact-pill-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div>
+        <span class="contact-pill-label">Location</span>
+        <span class="contact-pill-val">Nellore, India</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Srikar Gomedhikam · SAP S/4HANA Sales &amp; Distribution Consultant</p>
+</footer>
+
+</body>
+</html>
